@@ -1,52 +1,59 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="variables_set" id="26" inline="true" x="59" y="6">
-    <field name="VAR">LFOS</field>
-    <value name="VALUE">
-      <block type="sensor_object" id="34">
-        <field name="OBJECT">LEFTFRONT</field>
+  <block type="controls_whileUntil" id="7" inline="false" x="56" y="115">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="14">
+        <field name="OBJECT">ENTER</field>
       </block>
     </value>
-    <next>
-      <block type="oled_cleardisplay" id="24">
+    <statement name="DO">
+      <block type="multimedia_stopupdate" id="80">
         <next>
-          <block type="controls_whileUntil" id="7" inline="false">
-            <field name="MODE">UNTIL</field>
-            <value name="NUMBER">
-              <block type="sensor_button" id="14">
-                <field name="OBJECT">ENTER</field>
+          <block type="variables_set" id="26" inline="true">
+            <field name="VAR">LFOS</field>
+            <value name="VALUE">
+              <block type="sensor_object" id="34">
+                <field name="OBJECT">LEFTFRONT</field>
               </block>
             </value>
-            <statement name="DO">
-              <block type="oled_setcursor" id="43" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="50">
-                    <field name="NUM">10</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_number" id="51">
-                    <field name="NUM">10</field>
-                  </block>
-                </value>
+            <next>
+              <block type="oled_cleardisplay" id="24">
                 <next>
-                  <block type="oled_drawtext" id="60">
-                    <field name="TEXT">Left Front</field>
+                  <block type="oled_setcursor" id="43" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="50">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="51">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="oled_drawnumber" id="69" inline="true">
-                        <value name="NUMBER">
-                          <block type="variables_get" id="73">
-                            <field name="VAR">LFOS</field>
+                      <block type="oled_drawtext" id="60">
+                        <field name="TEXT">Left Front</field>
+                        <next>
+                          <block type="oled_drawnumber" id="69" inline="true">
+                            <value name="NUMBER">
+                              <block type="variables_get" id="73">
+                                <field name="VAR">LFOS</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="multimedia_doupdate" id="87"></block>
+                            </next>
                           </block>
-                        </value>
+                        </next>
                       </block>
                     </next>
                   </block>
                 </next>
               </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
-    </next>
+    </statement>
   </block>
 </xml>
