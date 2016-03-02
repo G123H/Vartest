@@ -9,99 +9,119 @@
     <statement name="DO">
       <block type="multimedia_stopupdate" id="80">
         <next>
-          <block type="variables_set" id="108" inline="true">
-            <field name="VAR">BUTTFOS</field>
+          <block type="variables_set" id="116" inline="true">
+            <field name="VAR">RSFOS</field>
             <value name="VALUE">
-              <block type="sensor_object" id="109">
-                <field name="OBJECT">REAR</field>
+              <block type="sensor_object" id="117">
+                <field name="OBJECT">RIGHTSIDE</field>
               </block>
             </value>
             <next>
-              <block type="variables_set" id="100" inline="true">
-                <field name="VAR">RFOS</field>
+              <block type="variables_set" id="118" inline="true">
+                <field name="VAR">LSFOS</field>
                 <value name="VALUE">
-                  <block type="sensor_object" id="101">
-                    <field name="OBJECT">RIGHTFRONT</field>
+                  <block type="sensor_object" id="119">
+                    <field name="OBJECT">LEFTSIDE</field>
                   </block>
                 </value>
                 <next>
-                  <block type="variables_set" id="26" inline="true">
-                    <field name="VAR">LFOS</field>
+                  <block type="variables_set" id="108" inline="true">
+                    <field name="VAR">BUTTFOS</field>
                     <value name="VALUE">
-                      <block type="sensor_object" id="34">
-                        <field name="OBJECT">LEFTFRONT</field>
+                      <block type="sensor_object" id="109">
+                        <field name="OBJECT">REAR</field>
                       </block>
                     </value>
                     <next>
-                      <block type="oled_cleardisplay" id="24">
+                      <block type="variables_set" id="100" inline="true">
+                        <field name="VAR">RFOS</field>
+                        <value name="VALUE">
+                          <block type="sensor_object" id="101">
+                            <field name="OBJECT">RIGHTFRONT</field>
+                          </block>
+                        </value>
                         <next>
-                          <block type="oled_setcursor" id="43" inline="true">
-                            <value name="STARTX">
-                              <block type="math_number" id="50">
-                                <field name="NUM">10</field>
-                              </block>
-                            </value>
-                            <value name="STARTY">
-                              <block type="math_number" id="51">
-                                <field name="NUM">10</field>
+                          <block type="variables_set" id="26" inline="true">
+                            <field name="VAR">LFOS</field>
+                            <value name="VALUE">
+                              <block type="sensor_object" id="34">
+                                <field name="OBJECT">LEFTFRONT</field>
                               </block>
                             </value>
                             <next>
-                              <block type="oled_drawtext" id="60">
-                                <field name="TEXT">Left Front=</field>
+                              <block type="oled_cleardisplay" id="24">
                                 <next>
-                                  <block type="oled_drawnumber" id="69" inline="true">
-                                    <value name="NUMBER">
-                                      <block type="variables_get" id="73">
-                                        <field name="VAR">LFOS</field>
+                                  <block type="oled_setcursor" id="43" inline="true">
+                                    <value name="STARTX">
+                                      <block type="math_number" id="50">
+                                        <field name="NUM">10</field>
+                                      </block>
+                                    </value>
+                                    <value name="STARTY">
+                                      <block type="math_number" id="51">
+                                        <field name="NUM">10</field>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="oled_setcursor" id="96" inline="true">
-                                        <value name="STARTX">
-                                          <block type="math_number" id="103">
-                                            <field name="NUM">10</field>
-                                          </block>
-                                        </value>
-                                        <value name="STARTY">
-                                          <block type="math_number" id="104">
-                                            <field name="NUM">20</field>
-                                          </block>
-                                        </value>
+                                      <block type="oled_drawtext" id="60">
+                                        <field name="TEXT">Left Front=</field>
                                         <next>
-                                          <block type="oled_drawtext" id="105">
-                                            <field name="TEXT">Right Front=</field>
+                                          <block type="oled_drawnumber" id="69" inline="true">
+                                            <value name="NUMBER">
+                                              <block type="variables_get" id="73">
+                                                <field name="VAR">LFOS</field>
+                                              </block>
+                                            </value>
                                             <next>
-                                              <block type="oled_drawnumber" id="106" inline="true">
-                                                <value name="NUMBER">
-                                                  <block type="variables_get" id="107">
-                                                    <field name="VAR">RFOS</field>
+                                              <block type="oled_setcursor" id="96" inline="true">
+                                                <value name="STARTX">
+                                                  <block type="math_number" id="103">
+                                                    <field name="NUM">10</field>
+                                                  </block>
+                                                </value>
+                                                <value name="STARTY">
+                                                  <block type="math_number" id="104">
+                                                    <field name="NUM">20</field>
                                                   </block>
                                                 </value>
                                                 <next>
-                                                  <block type="oled_setcursor" id="110" inline="true">
-                                                    <value name="STARTX">
-                                                      <block type="math_number" id="111">
-                                                        <field name="NUM">10</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="STARTY">
-                                                      <block type="math_number" id="112">
-                                                        <field name="NUM">30</field>
-                                                      </block>
-                                                    </value>
+                                                  <block type="oled_drawtext" id="105">
+                                                    <field name="TEXT">Right Front=</field>
                                                     <next>
-                                                      <block type="oled_drawtext" id="113">
-                                                        <field name="TEXT">Rear=</field>
+                                                      <block type="oled_drawnumber" id="106" inline="true">
+                                                        <value name="NUMBER">
+                                                          <block type="variables_get" id="107">
+                                                            <field name="VAR">RFOS</field>
+                                                          </block>
+                                                        </value>
                                                         <next>
-                                                          <block type="oled_drawnumber" id="114" inline="true">
-                                                            <value name="NUMBER">
-                                                              <block type="variables_get" id="115">
-                                                                <field name="VAR">BUTTFOS</field>
+                                                          <block type="oled_setcursor" id="110" inline="true">
+                                                            <value name="STARTX">
+                                                              <block type="math_number" id="111">
+                                                                <field name="NUM">10</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="STARTY">
+                                                              <block type="math_number" id="112">
+                                                                <field name="NUM">30</field>
                                                               </block>
                                                             </value>
                                                             <next>
-                                                              <block type="multimedia_doupdate" id="87"></block>
+                                                              <block type="oled_drawtext" id="113">
+                                                                <field name="TEXT">Rear=</field>
+                                                                <next>
+                                                                  <block type="oled_drawnumber" id="114" inline="true">
+                                                                    <value name="NUMBER">
+                                                                      <block type="variables_get" id="115">
+                                                                        <field name="VAR">BUTTFOS</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="multimedia_doupdate" id="87"></block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
                                                             </next>
                                                           </block>
                                                         </next>
@@ -131,5 +151,29 @@
         </next>
       </block>
     </statement>
+  </block>
+  <block type="oled_setcursor" id="120" inline="true" x="129" y="643">
+    <value name="STARTX">
+      <block type="math_number" id="121">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="STARTY">
+      <block type="math_number" id="122">
+        <field name="NUM">40</field>
+      </block>
+    </value>
+  </block>
+  <block type="oled_setcursor" id="123" inline="true" x="149" y="683">
+    <value name="STARTX">
+      <block type="math_number" id="124">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+    <value name="STARTY">
+      <block type="math_number" id="125">
+        <field name="NUM">50</field>
+      </block>
+    </value>
   </block>
 </xml>
